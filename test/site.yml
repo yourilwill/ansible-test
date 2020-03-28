@@ -1,0 +1,8 @@
+---
+- hosts: ios
+  connection: network_cli
+  tasks:
+    - name: test reachability
+      net_ping:
+        dest: 192.168.255.100
+
