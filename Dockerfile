@@ -6,7 +6,8 @@ RUN yum update -y && \
       ansible \
       openssh-server \
       openssh-clients \
-      sshpass && \
+      sshpass \
+      iproute && \
     rm -rf /var/cache/yum/* && \
     yum clean all && \
     sed -ri 's/^#PermitRootLogin yes/PermitRootLogin yes/' /etc/ssh/sshd_config && \
